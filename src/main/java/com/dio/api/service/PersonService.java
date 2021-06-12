@@ -54,6 +54,8 @@ public class PersonService {
 
         Person person = mapper.toModel(personDTO);
 
+        person.setId(id);
+
         person = personRepository.save(person);
 
         return "Updated person with ID " + person.getId();
